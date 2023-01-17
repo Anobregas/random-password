@@ -32,7 +32,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var collect = "";
-  var length = parseInt (window.prompt ("enter a length between 8-128"));
+  var length = parseInt(window.prompt ("enter a length between 8-128"));
   if (length < 8 || length > 128){
     console.log("anchovies")
   return alert("please try again");}
