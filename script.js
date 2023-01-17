@@ -3,7 +3,6 @@ var specialCharacters = ["@", "!", "#", "%", "^", "&"];
 var lowerCase = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
 var upperCase = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
-let charactersToPick = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 function generatePassword(){
@@ -32,35 +31,35 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var pick = prompt("you can have up to 9 characters in your password, how many would you like?")
-  if(pick == 1){
-    console.log("pineapple")
-  }else if(pick == 2){
-    console.log("sock")
-  }else if(pick == 3){
-    console.log("shoe")
-  }else if(pick == 4){
-    console.log("buckle")
-  }else if(pick == 5){
-    console.log("sock")
-  }else if(pick == 6){
-    console.log("shoe")
-  }else if(pick == 7){
-    console.log("buckle")
-  }else if(pick == 8){
-      console.log("sock")
-  }else if(pick == 9){
-    console.log("shoe")
-  }
+  var collect = "";
+  var length = parseInt (window.prompt ("enter a length between 8-128"));
+  if (length < 8 || length > 128){
+    console.log("anchovies")
+  return alert("please try again");}
   var upper = confirm("Would you like any upper case letters?")
+  if(upper == false){
+    return alert("please try agin")
+  }
   var lower = confirm("Would you like any lower case?")
+  if(lower == false){
+    return alert("please try agin")
+  }
   var number = confirm("Would you like numbers?")
+  if(number == false){
+    return alert("please try agin")
+  }
   var symbols = confirm("and symbols?")
+  if(symbols == false){
+    return alert("please try again")
+  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
   console.log("pepper")
-}
+  var allow = "";
+  for (var password = 0; password < length; i++) {
+    return length; 
+}}
 
 
 // Add event listener to generate button
