@@ -3,7 +3,6 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numeric = "123456789";
 var specialCharacters = "!@#$%^&*(){}";
-var collect = "";
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -20,13 +19,14 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+  let collect = "";
   let Choice = parseInt(prompt("enter number 8-128"))
   if(Choice < 8 || Choice > 128){
     console.log("pizza")
     return alert("please try again");}
   if(confirm("Would you like UPPER CASE letters")){
     console.log("pepperoni")
-    collect += lowerCase;}
+    collect += upperCase;}
   if(confirm("would you like lower case letters")){
     console.log("sausage")
     collect += lowerCase;}
@@ -36,7 +36,8 @@ function generatePassword() {
   if(confirm("would you like special characters")){
     console.log("cheese")
     collect += specialCharacters;}
-  for(i = 0; i < Choice; i++){
+  let run = "";
+  for( i = 0; i < Choice; i++){
     console.log ("pineapple")
     run += collect.charAt(Math.floor(Math.random() * collect.Choice));
   }
