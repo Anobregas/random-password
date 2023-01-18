@@ -37,16 +37,12 @@ function generatePassword() {
   if(confirm("would you like special characters")){
     console.log("cheese")
     collect += specialCharacters;}
-  for( i = 0; i < Choice; i++){
-    console.log ("pineapple")
-    run += collect.charAt(Math.floor(Math.random() * Choice));
+    for( i = 0; i < Choice; i++){
+      console.log ("pineapple")
+      var randomize = Math.floor(Math.random() * collect.length);
+      run += collect.substring(randomize, randomize +1);
+      console.log(run);
   }
   return run
-  
-
-  
-
-
-
 
 }
