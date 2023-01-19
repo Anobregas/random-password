@@ -1,6 +1,6 @@
 # Random Password
 
-A brief description of what this project does and who it's for
+This project was designed to create a safe randomized passwrod. The project allows the password to be completely custom. 
 
 
 ## Authors
